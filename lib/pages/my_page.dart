@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class MyPage extends StatelessWidget {
-  const MyPage({Key? key}) : super(key: key);
+  MyPage({Key? key}) : super(key: key);
+
+  final images = [
+    'https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/2wPYyq9Ejn4.png',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoSuexQoraIJ3Xc8Qde7Y_A-7v7vfwWxveA&usqp=CAU',
+    'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg',
+    'https://news.value-press.com/wp-content/uploads/interview_top_image_pakutaso.jpg',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -65,59 +72,9 @@ class MyPage extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: 3,
-              children: [
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-                InstagramPostItem(
-                    imageUrl:
-                        'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg'),
-              ],
+              children: images.map((imageUrl) {
+                return InstagramPostItem(imageUrl: imageUrl);
+              }).toList(),
             ),
           ],
         ),
